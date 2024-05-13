@@ -32,3 +32,4 @@
 /Users/jmail/projects/RssFeeder/obj/Debug/net8.0/RssFeeder.genruntimeconfig.cache
 /Users/jmail/projects/RssFeeder/obj/Debug/net8.0/ref/RssFeeder.dll
 /Users/jmail/projects/RssFeeder/bin/Debug/net8.0/HtmlAgilityPack.dll
+/Users/jmail/projects/RssFeeder/obj/Debug/net8.0/RssFeeder.sourcelink.json
