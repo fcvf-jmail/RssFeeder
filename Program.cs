@@ -22,4 +22,4 @@ app.MapGet("rssFeeder/{*channelUsername}", (string channelUsername) =>
     return feed.ToJson();
 });
 
-app.Run("http://localhost:2817");
+app.Run();
