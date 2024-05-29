@@ -5,14 +5,6 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RssFeeder", "RssFeeder.csproj", "{D07AAD24-3969-456C-815E-7FB793281A7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantsParser", "..\RestaurantsParser\RestaurantsParser.csproj", "{E810B62A-F65A-42CD-8A5C-359E6B7FE8E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "LeetCode\LeetCode.csproj", "{3763C7DB-7521-4718-ACC4-0538334B85A0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "..\LeetCode\LeetCode.csproj", "{53A239AC-C471-444B-BCD4-2FF18E4BABD0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetCode", "..\LetCode\LetCode.csproj", "{ECE2C61E-ABB9-4E6F-87C8-6C9DE72B3461}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
