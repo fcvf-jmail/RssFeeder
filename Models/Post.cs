@@ -155,6 +155,8 @@ public class Post
     {
         string htmlContent = MediaToHtml();
         htmlContent += $"{FormattedText}";
+        
+        if (htmlContent.Length == 0) htmlContent = $"<a href=\"{Url}\"></a>This post is not supported, view in telegram";
         return htmlContent;
     }
 
@@ -164,12 +166,6 @@ public class Post
         foreach (IMedia media in Media) htmlContent.Append(media.ToHtml());
         if (htmlContent.Length > 0) htmlContent.Append("<br><br>");
         return htmlContent.ToString();
-    }
-
-    public bool IsSupported()
-    {
-        bool x = ContentHtml.Length != 0;
-        return x;
     }
 
     public Item ToItem()

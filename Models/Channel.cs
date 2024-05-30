@@ -39,7 +39,7 @@ public class Channel
         foreach (HtmlNode PostNode in PostesNodes)
         {
             Post post = new(PostNode, Title);
-            if (post.IsSupported()) Postes.Add(post);
+            Postes.Add(post);
         }
         return Postes;
     }
