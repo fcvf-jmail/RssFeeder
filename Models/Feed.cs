@@ -1,28 +1,14 @@
 namespace RssFeeder;
-using Newtonsoft.Json;
 using Microsoft.Extensions.Configuration;
 public class Feed
 {
-    [JsonProperty("version")]
     private string Version { get; set; }
-
-    [JsonProperty("title")]
     private string Title { get; set; }
-
-    [JsonProperty("home_page_url")]
     private string HomePageUrl { get; set; }
-
-    [JsonProperty("feed_url")]
     private string FeedUrl { get; set; }
-
-    [JsonProperty("icon")]
     private string Icon { get; set; } = "https://t.me/favicon.ico";
-
-    [JsonProperty("favicon")]
     private string FavIcon { get; set; } = "https://t.me/favicon.ico";
-
-    [JsonProperty("items")]
-    private List<string> JsonItems { get; set; }
+    private List<object> JsonItems { get; set; }
     private List<Post> Postes { get; set; }
 
     public Feed(IConfiguration configuration, string channelTitle, string channelUsername, List<Post> postes)
@@ -36,9 +22,9 @@ public class Feed
         Postes = postes;
         JsonItems = GetItems();
     }
-    private List<string> GetItems()
+    private List<object> GetItems()
     {
-        List<string> items = [];
+        List<object> items = [];
         foreach (Post post in Postes)
         {
             Item item = post.ToItem();
@@ -47,8 +33,17 @@ public class Feed
         return items;
     }
 
-    public string ToJson()
+    public object ToJson()
     {
-        return JsonConvert.SerializeObject(this, Formatting.Indented);
+        return new
+        {
+            version = Version ,
+            title = Title ,
+            home_page_url = HomePageUrl,
+            feed_url = FeedUrl ,
+            icon = Icon ,
+            favicon = FavIcon,
+            items = JsonItems 
+        };
     }
 }
